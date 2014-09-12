@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhistleDetector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+       {{include 'web2py_ajax.html'}}
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Whistle Detection</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Human Whistle Pattern Detection</EM></h1>
+      <p class="lead"> This project aims at designing compact biometrics mechanism using the whistle pattern of a Human being. It is hypothesized that there are fundamental differences in the whistle patterns of different people as the textures are different from one another.</p>
+      <a class="btn btn-primary btn-lg btn-block">Learn more about the project</a>
+    <br>
+      <INPUT class="btn btn-primary btn-lg btn-block", value="Record or Upload the Whistle" , onclick="location.href='{{=URL(r=request,f='record')}}'"/>
+      </div>
+  </div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <p>The whistles have to be discriminated from other transients. In this algorithm a simplistic classification method was chosen,
+relying on band-energy ratios, which are commonly used features in general audio recognition . Band-energy ratio (BER) is calculated as the ratio of the energy on a certain band compared to the total energy.</p>
+    </div>
+    <div class="col-md-4">
+      <p> Practically the squared magnitudes of DFT bins belonging to a certain band are summed and divided by the sum of all squared bin magnitudes. The frequency bands in this application were chosen to be combined Bark bands so that three adjacent bands are merged, resulting in a total of eight bands (there are a total of 24 Bark bands).</p>
+    </div>
+    <div class="col-md-4">
+      <p>Each participant will have to record their whistle pattern on three consecutive days. The sampling rate is 44.1 KHz</p>
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+  <p>The calculated BER vector is compared to an average vector by the Euclidean distance metric. The average vector is calculated beforehand from several whistles. If the Euclidean distance L 2 is below a certain threshold L 2,thr (e.g. 0.5), the frame is accepted </p>
+</div>
+
+
+</div>
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+
+  </body>
+</html>

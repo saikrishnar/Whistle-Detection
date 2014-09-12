@@ -1,0 +1,57 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arvo', Georgia, Times, serif;
+}
+
+p, div {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+
+body {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background: url(http://subtlepatterns.com/patterns/photography.png) repeat 0 0;
+}
+
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+.container-narrow > hr {
+    margin: 40px 0 0 0;
+  }
+
+
+ .marketing {
+  margin: 40px 0;
+}
+
+.jumbotron {
+  margin: 5px 0;
+  text-align: center;
+  background-color:transparent;
+}
+.equation{
+	margin: 100px 60px 30px 	0px;
+  text-align: center;
+  background-color:transparent;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.submit{
+  margin: 50px 0px 0px 20px ;
+  text-align: center;
+
+  ;
+}
+ul li {
+	margin: 10px 10px 0px 40px ;
+	display: inline-block;
+}
+
+ul p{
+	margin: 10px 15px 0px 0px ;
+}
